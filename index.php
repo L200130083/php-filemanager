@@ -15,9 +15,9 @@ foreach ($download_dir as $i)
 	{
 		echo "<hr>";
 		$folder = $config['directory']; 
-		$destination = $folder . DIRECTORY_SEPARATOR . getFolder($file->getExtension()). DIRECTORY_SEPARATOR .$file->getName(); //set the destination folder
+		$destination = $folder . DIRECTORY_SEPARATOR . getFolder($file->getExtension()). DIRECTORY_SEPARATOR . $file->getExtension() . DIRECTORY_SEPARATOR . DIRECTORY_SEPARATOR .$file->getName(); //set the destination folder
 		$source = $folder . DIRECTORY_SEPARATOR . $file->getName(); //souce of the file
-		//file_exists($destination) OR create_dir($destination);
+		file_exists($destination) OR create_dir(dirname($destination));
 		if (@rename($source, $destination)) //start moving the ffile from the source to the destination
 		{
 			if (file_exists($source)) echo 'exists<br />';

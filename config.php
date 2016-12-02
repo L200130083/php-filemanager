@@ -6,10 +6,10 @@
 * i set it to my 'download' folder
 */
 $ds = DIRECTORY_SEPARATOR;
-$config['base_url'] = 'http://localhost/p/downloadmanager';
+$config['base_url'] = 'http://localhost/p/php-filemanager';
 
 //the download directory
-$config['directory'] = "C:{$ds}Users{$ds}ANdersoN{$ds}Downloads";
+$config['directory'] = "C:{$ds}Users{$ds}joe{$ds}Downloads";
 
 /**
 * file with extension mp3, wav, flac, and ogg will moved to C:\Users\ANdersoN\Downloads\Music\
@@ -18,28 +18,27 @@ $config['directory'] = "C:{$ds}Users{$ds}ANdersoN{$ds}Downloads";
 //array('folder_name' => mixed_extension)
 $config['folder'] = array(
 						'Music' => array(
-										'mp3', 'wav', 'flac', 'ogg'
+										'mp3', 'wav', 'flac', 'ogg', 'm4a'
 										),
 						'Video' => array(
 										'wmp', 'flv', 'mkv', 'mp4', 'avi', '3gp'
 										),
 						'Documents' => array(
-										'doc', 'docx', 'xls', 'xlsx', 'pdf', 'rtf', 'txt', 'ppt', 'pptx'
+										'doc', 'docx', 'xls', 'xlsx', 'pdf', 'rtf', 'txt', 'ppt', 'pptx', 'csv'
 										),
 						'Compressed' => array(
 										'zip', '7zip', 'rar', 'gz'
 										),
 						'Programs' => array(
-										'exe'
+										'exe', 'msi'
 										),
 						'Scripts' => array(
-										'php', 'sql', 'py', 'html', 'htm'
+										'php', 'sql', 'py', 'html', 'htm', 'xml', 'xhtml', 'js', 'css'
 										),
 						'Pictures' => array(
-										'jpg', 'jpeg', 'png', 'bmp'
+										'jpg', 'jpeg', 'png', 'bmp', 'gif', 'ico'
 										),
-						'Pictures/gif' => array(
-										'gif'
+						'Apk'	=> array(
+										'apk'
 										)
-
 					);
